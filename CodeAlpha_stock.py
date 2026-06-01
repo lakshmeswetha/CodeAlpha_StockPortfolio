@@ -129,7 +129,7 @@ def save_results(breakdown, total):
 
 def main():
     print("╔══════════════════════════════════╗")
-    print("║    STOCK PORTFOLIO TRACKER     ║")
+    print("║    STOCK PORTFOLIO TRACKER       ║")
     print("╚══════════════════════════════════╝")
 
     display_available_stocks()
