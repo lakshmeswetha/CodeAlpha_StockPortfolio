@@ -111,7 +111,7 @@ def save_results(breakdown, total):
                 )
             f.write("-" * 40 + "\n")
             f.write(f"Total Investment: ${total:,.2f}\n")
-        print(f"✅ Saved to '{filename}'")
+        print(f" Saved to '{filename}'")
 
     elif choice == "2":
         filename = "portfolio_summary.csv"
@@ -122,14 +122,14 @@ def save_results(breakdown, total):
                 writer.writerow([symbol, data["quantity"], data["price"], data["value"]])
             writer.writerow([])
             writer.writerow(["Total", "", "", total])
-        print(f"✅ Saved to '{filename}'")
+        print(f" Saved to '{filename}'")
 
     else:
         print("Results not saved.")
 
 def main():
     print("╔══════════════════════════════════╗")
-    print("║   💼 STOCK PORTFOLIO TRACKER     ║")
+    print("║    STOCK PORTFOLIO TRACKER     ║")
     print("╚══════════════════════════════════╝")
 
     display_available_stocks()
@@ -137,14 +137,14 @@ def main():
     portfolio = get_portfolio_from_user()
 
     if not portfolio:
-        print("\n⚠️  No stocks entered. Exiting.")
+        print("\n No stocks entered. Exiting.")
         return
 
     breakdown, total = calculate_investment(portfolio)
     display_results(breakdown, total)
     save_results(breakdown, total)
 
-    print("\nThank you for using Stock Portfolio Tracker! 👋\n")
+    print("\nThank you for using Stock Portfolio Tracker! \n")
 
 if __name__ == "__main__":
     main()
